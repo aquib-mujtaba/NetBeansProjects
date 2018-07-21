@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Getting Back the Data</title>
+        <script>
+            function funStore1(){
+              var y=localStorage.getItem("browserData");
+              var x=JSON.parse(y);
+              document.getElementById("demo1").innerHTML=x.name;
+              document.getElementById("demo2").innerHTML=x["age"];
+              document.getElementById("demo3").innerHTML=x.city;
+              alert("DATA Displayed.....");
+            }
+        </script>
+    
+    </head>
+    <body onload="funStore1();">
+        <p id="demo1"></p>
+        <p id="demo2"></p>
+        <p id="demo3"></p>
+    </body>
+</html>

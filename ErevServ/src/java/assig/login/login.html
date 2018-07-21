@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Login Form</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            div{
+                background-image: url("C:/Users/basavarajm/Documents/NetBeansProjects/ErevServ/web/images/Scenes/img26.jpg");
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+        <form name="frmReg" method="POST" action="http://localhost:7070/ErevServ/Logger" > 
+            <div >
+                <table border="1" style="width: 300px;height: 500px">
+                    <thead>
+                        <tr><th colspan="2">Login FORM</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>UserName</td><td><input type="text" name="tbUsername" required/></td></tr>
+                        <tr><td>Password</td><td><input type="password" name="tbPassword" required/></td></tr>
+                       
+                        <tr>
+                            <td> 
+                                <button type="submit" name="bsubmit">LogIn</button>
+                            </td>
+                            <td>
+                                <button type="reset" name="breset">Reset</button>
+                                <button type="button" name="bsubmit">Close</button>
+                                <button type="button" name="bsubmit"><a href='file:///C:/Users/basavarajm/Documents/NetBeansProjects/ErevServ/src/java/assig/register_form/Profile.html'> Sign Up</a></button>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                    <tfoot>
+             <tr>
+                 <th colspan="2">&COPY;ErevMax Corporation &trade;Limited &reg;</th>
+             </tr>
+                    </tfoot>
+
+                </table>
+
+            </div>
+        </form>
+        </center>
+    </body>
+</html>

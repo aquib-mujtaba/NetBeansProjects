@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Angular Application</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <script src="angular.min.js">
+        </script>
+        <script>
+            var app=angular.module('myApp',[]);
+            app.controller('myControler',function ($scope)
+            {
+                $scope.fname="Aquib"; //Alterative of ng-init
+                $scope.lname="Mujtaba";
+//                $scope.fname="";
+//                $scope.lname="";
+ $scope.counter=0;
+                $scope.bClick=function()
+                {
+                    $scope.counter++;
+                }
+            });
+        </script>
+    </head>
+    <body>
+        <DIV ng-app="myApp" ng-controller="myControler">
+
+            First  Name : <input type="text" ng-init="fname= 'FN1'" ng-model="fname" placeholder="Enter Name Here">
+            </br>
+            Last  Name : <input type="text" ng-init="lname= 'LN1'"  ng-model="lname" placeholder="Enter Name Here">
+            </br>
+            <h2>  Full Name: {{fname + " " + lname}}</h2>
+                        <button ng-click="bClick()">Click me</button>
+
+{{counter}}
+        </DIV>
+    </body>
+</html>

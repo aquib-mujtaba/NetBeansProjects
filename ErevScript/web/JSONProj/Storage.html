@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>Store Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function funStore() {
+                var x = {"name": null, "age": null, "city": null}
+                x.name = document.getElementById("tbName").value;
+                x.age = document.getElementById("tbAge").value;
+                x.city = document.getElementById("tbCity").value;
+                var y = JSON.stringify(x);
+                localStorage.setItem("browserData", y);
+                alert("Data Stored");
+            }
+            function funRtv() {
+                window.location = "Retrive.html";
+            }
+        </script>
+
+    </head>
+    <body> <center>
+        <form><table>
+                <tr>
+                    <td>Name <input type="text" id="tbName"/></td>
+                    <td>Age <input type="number" id="tbAge"/></td>
+                    <td>     City
+                        <select id="tbCity">
+                            <option value="New Delhi">New Delhi</option>
+                            <option value="Mumbai">Mumbai</option>
+                            <option value="Chennai">Chennai</option>
+                            <option value="Kolkata">Kolkata</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="button" onclick="funStore();">Click to store data</button>
+                        <button type="button" onclick="funRtv();">Click to Get Back Data</button>
+                    </td></tr>
+                <tr>
+                    <td>
+                        <button type="reset">Clear</button>
+                        <button type="button" onclick="window.close();">Close</button>
+                    </td>
+                </tr>
+            </table>     
+        </form>
+    </center>
+    </body>
+</html>

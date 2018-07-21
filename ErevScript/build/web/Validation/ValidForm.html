@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function  funCal() {
+//                alert("Welcome To the Submittion of the form");
+                if (document.getElementById("tbFirstNumber").value.trim() == "")
+                {
+                    alert("First Number Cannot be blank");
+                    document.getElementById("tbFirstNumber").value = "";
+                    document.getElementById("tbFirstNumber").focus();
+                    return false;
+                }
+                if (document.getElementById("tbSecondNumber").value.trim() == "")
+                {
+                    alert("Secound Number Cannot be blank");
+                    document.getElementById("tbSecondNumber").value = "";
+                    document.getElementById("tbSecondNumber").focus();
+                    return false;
+                }
+                if (isNaN(document.getElementById("tbFirstNumber").value.trim()))
+                {
+                    alert("Number Should not be char");
+                    document.getElementById("tbFirstNumber").value = "";
+                    document.getElementById("tbFirstNumber").focus();
+                    return false;
+                }
+
+                if (isNaN(document.getElementById("tbSecondNumber").value.trim()))
+                {
+                    alert(" 2nd Number Should not be char");
+                    document.getElementById("tbSecondNumber").value = "";
+                    document.getElementById("tbSecondNumber").focus();
+                    return false;
+                }
+                var x, y, z;
+                x = parseInt(document.getElementById("tbFirstNumber").value);
+                y = parseInt(document.getElementById("tbSecondNumber").value);
+                z = x + y;
+                document.getElementById("tbResult").value = z.toString();
+                alert("Computation done...");
+                return true;
+            }
+        </script>
+    </head>
+    <body>
+    <center>
+        <form name="frmAdder" method="POST" action="https://www.yahoo.co.in/" onsubmit=" return funCal()" > 
+            <div >
+                <table border="1" style="width: 500px;height: 600px">
+                    <thead>
+                        <tr><th colspan="2">ADDITION FORM</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>First Number</td><td><input type="text" name="tbFirstNumber" id="tbFirstNumber"/></td></tr>
+                        <tr><td>Second Number</td><td><input type="text" name="tbSecondNumber" id="tbSecondNumber"/></td></tr>
+                        <tr><td>Result</td><td><input type="text" name="tbResult" id="tbResult" readonly/></td></tr>
+                        <tr>
+                            <td> 
+                                <button type="submit" name="bSubmit"> ADD </button>
+                            </td>
+                            <td>
+                                <button type="reset" name="bReset">Clear</button>
+                                <button type="button" name="bClose" onclick="window.closed()">Close</button>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th colspan="2">&COPY;ErevMax Corporation &trade;Limited &reg;</th>
+                        </tr>
+                    </tfoot>
+
+                </table>
+
+            </div>
+        </form>
+    </center>
+</body>
+</html>

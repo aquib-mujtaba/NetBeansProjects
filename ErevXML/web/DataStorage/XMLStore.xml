@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<?xml-stylesheet type="text/xsl" href="DynamicStyle6.xsl"?>-->
+<?xml-stylesheet type="text/css" href="StoreStatic.css"?>
+    <!DOCTYPE ErevMax SYSTEM "XMLStore.dtd">
+
+<ErevMax>
+    <Trainee EMPNO="A1000" ACTION='sql="select * from trainee"'>
+          <ENAME>AQUIB</ENAME> 
+          <AGE>12</AGE>
+        <GENDER>MALE</GENDER>
+        <DEPNO>D21</DEPNO>
+    </Trainee>
+    <Trainee EMPNO="A10001">
+        <ENAME>HARSHAD</ENAME>
+        <AGE>14</AGE>
+        <GENDER>MALE</GENDER>
+        <DEPNO>D23</DEPNO>
+    </Trainee>
+    <Trainee EMPNO="A1012">
+        <ENAME>MUJTABA</ENAME>
+        <AGE>16</AGE>
+        <GENDER>MALE</GENDER>
+        <DEPNO>D21</DEPNO>
+    </Trainee>
+    <Trainee EMPNO='A1013'>
+        <ENAME>SWAPNIL</ENAME>
+        <AGE>15</AGE>
+        <GENDER>MALE</GENDER>
+        <DEPNO>D22</DEPNO>
+    </Trainee>
+    <Trainee EMPNO='A1043'>
+        <ENAME>AYSUSH</ENAME>
+        <AGE>25</AGE>
+        <GENDER>MALE</GENDER>
+        <DEPNO>D23</DEPNO>
+    </Trainee>
+    <Trainee EMPNO="A1005">
+        <ENAME>ADVAILT</ENAME>
+        <AGE>14</AGE>
+        <GENDER>MALE</GENDER>
+        <DEPNO>D24</DEPNO>
+    </Trainee>
+    <Department DEPNO="D21" EMPNOS="A1005 A1043 A1012">
+        <DNAME>ADMIN</DNAME>
+        <LOCATION>NEW YORK</LOCATION>
+        <ESTD>12-JAN-2000</ESTD>  
+    </Department>
+    <Department DEPNO="D22">
+        <DNAME>OPRATION</DNAME>
+        <LOCATION>KOLKATA</LOCATION>
+        <ESTD>12-FAB-2000</ESTD>  
+    </Department>
+    <Department DEPNO="D23">
+        <DNAME>SALES</DNAME>
+        <LOCATION>CHIGAGO</LOCATION>
+        <ESTD>12-JUN-2000</ESTD>  
+    </Department>
+    <Department DEPNO="D24">
+        <DNAME>TRAINING</DNAME>
+        <LOCATION>INDIA</LOCATION>
+        <ESTD>12-DEC-2000</ESTD>  
+    </Department>
+</ErevMax>

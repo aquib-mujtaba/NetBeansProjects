@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>HTml Main Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="angular.min.js"></script>  
+        <script src="jquery-2.1.3.min.js"></script>  
+        <style>
+            body{
+                background-image: url("img27.jpg")
+            }
+            .menuDiv
+           {
+              /*  background-color: coral;
+                height: 50px;
+                width: 260px;
+                font-family: serif;
+                font-size: 18px;
+                text-align: center;
+                text-decoration: none;*/
+            }
+            .shopp
+            {
+                height: 300px;
+                width: 300px;
+                background-color: yellow;
+            }
+            .calculater
+            {
+                height: 350px;
+                width: 350px;
+                background-color: aqua;
+
+
+            }
+            .active
+            {
+                background-color: green;
+            }
+            ul
+            {
+                list-style-type: none;
+                margin:0;
+                padding:0;
+                overflow:hidden;
+                background-color:#333;
+            }
+            li
+            {
+                float:left;
+            }
+            li a
+            {
+                display:block;
+                color:white;
+                text-align:center;
+                padding:14px 16px;
+                text-decoration:none;
+            }
+            li a:hover:not(.active)
+            {
+                background-color: silver;
+            }
+            
+        </style>
+
+
+
+        <script>
+            $(document).ready
+                    (
+                            function ()
+                            {
+                                $("#spb").click
+                                        (
+                                                function ()
+                                                {
+                                                    $("#cal").fadeIn(5000);
+
+
+                                                }
+
+                                        );
+//                                $("#calb").click
+//                                        (
+//                                                function ()
+//                                                {
+//                                                    $("#shopp").fadeIn(5000);
+//                                                }
+//
+//
+//                                        );
+                            }
+                    );
+        </script>
+       
+
+<script>
+var app = angular.module("myShoppingList", []); 
+app.controller("myCtrl", function($scope) {
+    $scope.products = ["KeyBoard", "Computer", "Laptop"];
+    $scope.addItem = function () {
+        $scope.errortext = "";
+        if (!$scope.addMe) {return;}        
+        if ($scope.products.indexOf($scope.addMe) == -1) {
+            $scope.products.push($scope.addMe);
+        } else {
+            $scope.errortext = "This item is already there.";
+        }
+    }
+    $scope.removeItem = function (x) {
+        $scope.errortext = "";    
+        $scope.products.splice(x, 1);
+    }
+});
+</script>
+
+
+      
+    </head>
+
+    <body>
+        <div>
+        <div id="shopp" class="shopp" ng-app="myShoppingList" ng-controller="myCtrl">
+            <ul>
+                <li ng-repeat="x in products">{{x}}<span ng-click="removeItem($index)"> Click To Remove</span></li>
+            </ul>
+            <input ng-model="addMe" style="size: 50px;margin-top: 20px; padding-bottom:  20px">
+            <button ng-click="addItem()" style="size: 40px;margin-top: 30px;">Add Items</button>
+            <p>{{errortext}}</p>
+        </div>
+
+        <div id="cal" class="calculater">
+            First Number <input type="number " ng-model="snum" style="size: 50px;margin-top: 20px; padding-bottom:  20px">
+            </br>
+            Second Number <input type="number" ng-model="fnum" style="size: 50px;margin-top: 20px; padding-bottom:  20px"> 
+        </div>
+
+        <div  style="margin-left: 500px">
+            <ul>
+                <li id="spb" >Shopping List</li>
+                <li id="calb">Calculator</li>
+                <li id="homeb">Home</li>
+            </ul>
+<!--            <button id="spb" >Shopping List</button>
+            <button id="calb" >Calculator</button>
+            <button id="homeb"  >Home</button>-->
+        </div>
+        </div>
+
+        <h1 style="color: blue"> <span style="color: red">S</span>ingle-<span style="color: red">P</span>age-<span style="color: red">A</span>pplication</h1>
+    </body>
+</html>

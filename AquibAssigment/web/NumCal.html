@@ -1,0 +1,71 @@
+
+
+<html>
+    <head>
+        <title>Number Calculation </title>
+        <script>
+             function  calFan() {
+                if (document.getElementById("fNumber)").value.trim() == "")
+                {
+                    alert("First Number Cannot be blank");
+                    document.getElementById("fNumber").value = "";
+                    document.getElementById("fNumber").focus();
+                    return false;
+                }
+                if (document.getElementById("sNumber").value.trim() == "")
+                {
+                    alert("Secound Number Cannot be blank");
+                    document.getElementById("sNumber").value = "";
+                    document.getElementById("sNumber").focus();
+                    return false;
+                }
+                if (isNaN(document.getElementById("fNumber").value.trim()))
+                {
+                    alert("First Number Should not be char");
+                    document.getElementById("fNumber").value = "";
+                    document.getElementById("fNumber").focus();
+                    return false;
+                }
+
+                if (isNaN(document.getElementById("sNumber").value.trim()))
+                {
+                    alert(" 2nd Number Should not be char");
+                    document.getElementById("sNumber").value = "";
+                    document.getElementById("sNumber").focus();
+                    return false;
+                }
+               
+            }
+        </script>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form name="numfrm" action="http://localhost:7070/ErevWebAquib/Calculate" onsubmit=" return calFan()">
+            <table>
+                <tr>
+                    <td>
+                        First number
+                    </td>
+                    <td><input type="number" name="fNumber" id="fNumber" required=""></td>
+                </tr>
+                <tr>
+                    <td>
+                        Secound number
+                    </td>
+                    <td><input type="number" name="sNumber" id="sNumber" required=""></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="radio" name="opration" value="Add" id="Add" required=""/>Add
+                        <input type="radio" name="opration" value="sub" id="sub" required="" />Subtract
+                        <input type="radio" name="opration" value="mult" id="mult" required=""/>Multiply
+
+                    </td>
+                </tr>
+            </table>
+            <button type="submit" name="bsubmit">Calculate </button>
+        </form>
+    </body>
+</html>

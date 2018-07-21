@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Angular Application</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <script src="angular.min.js"></script>
+        <script src="App1.js"></script>
+        <script src="ctrl1.js"></script>
+    </head>
+    <body>
+        <DIV ng-app="myApp" ng-controller="myControler">
+
+            First  Name : <input type="text" ng-model="fname" placeholder="Enter Name Here">
+            </br>
+            Last  Name : <input type="text"   ng-model="lname" placeholder="Enter Name Here">
+            </br>
+            <h2>  Full Name: {{fname + " " + lname}}</h2>
+
+        </DIV>
+    </body>
+</html>

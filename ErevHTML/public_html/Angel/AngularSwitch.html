@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <script src="angular.min.js">
+        </script>
+        <script>
+            var app = angular.module('myApp', []);
+            app.controller('myControler', function ($scope)
+            {
+                $scope.result = 0;
+                $scope.bClick = function ()
+                {
+                    switch ($scope.op)
+                    {
+                        case '+':
+                            $scope.result = $scope.fnum + $scope.snum;
+                            break;
+                        case '-':
+                            $scope.result = $scope.fnum - $scope.snum;
+                             break;
+                        case '*':
+                            $scope.result = $scope.fnum * $scope.snum;
+                             break;
+                        case '/':
+                            $scope.result = $scope.fnum \ $scope.snum;
+                             break;
+                        case '%':
+                            $scope.result = $scope.fnum % $scope.snum; break;
+
+default :
+    alert("plese select Option First")
+
+                    }
+                }
+            });
+        </script>
+    </head>
+    <body ng-app="myApp" ng-controller="myControler">
+        <div>
+            <p>First Number <input type="number" ng-model="fnum"></p>
+            <p>Second Number <input type="number" ng-model="snum"></p>
+            <p>
+                <input type="radio" ng-model="op" value="+"/>Add+
+                <input type="radio" ng-model="op" value="-"/>Subtract -
+                <!--<input type="radio" ng-model="op" value="/"/>Divide/-->
+                <input type="radio" ng-model="op" value="*"/>Multiplication*
+                <input type="radio" ng-model="op" value="%"/>Reminder %
+            </p>
+            <!--</div>-->
+            <!--        <div ng-switch="op">
+                        <div ng-switch-when="+">
+                            <p>Answer is {{fnum+snum}}</p>
+                        </div>
+                        <div ng-switch-when="-">
+                            <p>Answer is {{fnum-snum}}</p>
+                        </div>
+                        <div ng-switch-when="*">
+                            <p>Answer is {{fnum*snum}}</p>
+                        </div>
+                        <div ng-switch-when="/">
+                            <p>Answer is {{fnum/snum}}</p>
+                        </div>
+                        <div ng-switch-when="%">
+                            <p>Answer is {{fnum%snum}}</p>
+                        </div>
+                        <div ng-switch-default>
+                            <p>SELECT THE Operator </p>
+                        </div>
+                    </div>-->
+            <button ng-click="bClick()">Click</button></div>
+        <p>Result= {{result}}</p>
+    </body>
+</html>

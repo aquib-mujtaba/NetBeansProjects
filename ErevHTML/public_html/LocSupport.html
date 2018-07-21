@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Location Awareness</title>
+        <style>
+            html{
+
+                height: 100%;
+            }
+            body{
+                height: 100%;
+                width: 100%;
+                margin: 10%;
+            }
+            #map_canvas
+            {
+                height: 50%;
+                width: 50%
+            }
+        </style>
+        <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyAvHLltrsMEZgwlPH5YIFtZsbkYnJWuLZE"></script>
+        <script>
+            function  fuctionLoc()
+            {
+                var str = "Location Is not supported in This Browser";
+                if (navigator.geolocation) {
+
+                    str = "location is Supportded";
+                    alert(str);
+                    alert("Now Showing latitude and Longitude");
+                    window.navigator.geolocation.getCurrentPosition(showPosition, errorHandeler);
+                }
+
+            }
+            function showPosition(position)
+            {
+                alert("Latitude:" + position.coords.latitude + "\n" +
+                        "Longitude:" + position.coords.longitude);
+                alert("Loading the Google Map");
+                var num = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+                var myOptions =
+                        {
+                            zoom: 16,
+                            center: num,
+                            mapTypeId: google.maps.MapTypeId.HYBRID
+                        };
+                        var mymap=new google.maps.Map(document.getElementById("map_canvas"),myOptions);
+            }
+            function errorHandeler(error)
+            {
+                alert("Error Code:" + error.code);
+                switch (error.code)
+                {
+                    case error.PERMISSION_DENIED:
+                        alert("Permission denied");
+                        break;
+                    case error.PERMISSION_UNAVAILABLE:
+                        alert("Postion UNavalkable")
+                        break;
+                    case error.TIMEOUT:
+                        alert("Timeout Occur ");
+                        break;
+                }
+            }
+
+        </script>
+    </head>
+    <body>
+        <div id="map_canvas"></div>
+        <button type="button" name="bLoc" id="bLoc" onclick="fuctionLoc();">Check Location</button>
+    </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="angular.min.js">
+        </script>
+    </head>
+    <body>
+        <div ng-app="" ng-init="cars=['Alto','Maruti','Nano','Honda']">
+            <ol>
+                <!--<li ng-repeat=" c in cars">{{c}}-->
+                <li ng-repeat=" c in cars" ng-bind="c">
+                    
+                </li>
+            </ol>
+            
+        </div>
+    </body>
+</html>

@@ -1,0 +1,8 @@
+{
+    "elements": {
+        "my-Directive": {},
+        "myDirective": {},
+        "directive": {}
+    },
+    "attributes": {}
+}

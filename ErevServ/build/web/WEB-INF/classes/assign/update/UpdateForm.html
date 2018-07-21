@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Register Your Details Here</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <center>
+        <form name="frmReg" method="POST" action="http://localhost:7070/ErevServ/UpdaterForm" > 
+            <div >
+                <table border="1" style="width: 500px;height: 600px">
+                    <thead>
+                        <tr><th colspan="2">Update Form</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Put UserName*</td><td><input type="text" name="tbUsername" required/></td></tr>
+                        <tr><td>Update Password</td><td><input type="password" name="tbPassword" required/></td></tr>
+                        <tr><td>Update Date-Of-Birth</td><td><input type="date" name="tbDob" required/></td></tr>
+                        <tr><td>Gender</td>
+                            <td> Male<input type="radio" name="tbgender" value="Male"/>
+                                Female<input type="radio" name="tbgender" value="Female"/></td>
+                        </tr>
+                        <tr>
+                            <td> 
+                                <button type="submit" name="bsubmit">Update</button>
+                            </td>
+                            <td>
+                                <button type="reset" name="breset">Reset</button>
+                                <button type="button" name="bsubmit">Close</button>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                    <tfoot>
+             <tr>
+                 <th colspan="2">&COPY;ErevMax Corporation &trade;Limited &reg;</th>
+             </tr>
+                    </tfoot>
+
+                </table>
+
+            </div>
+        </form>
+        </center>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+ErevMax{
+    background-color: aqua;
+    background-image: url("img29.jpg");
+    background-repeat: no-repeat;
+    width: 50%;
+}
+Trainee{
+    display: block;
+    margin-bottom: 100pt;
+    margin-left: 50pt;
+    background-image: url("img29.jpg");
+}
+ENAME{
+    display: block;
+    color: red;
+    font-size: 40pt;
+    font-style: italic;
+    font-family: Arial;
+    text-align: center;
+}
+AGE{
+    color: #0000FF;
+    font-size: 20pt;
+    text-decoration: line-through;
+}
+GENDER,DEPNO{
+    display: inline;
+    color: #234FFA;
+    margin-left: 40pt;
+    background-color: cyan;
+    font-weight: bold;
+    border-style: outset;
+    border-color: red;
+    font-family: Taoma;
+    text-transform: lowercase;
+    width: 20%;
+}

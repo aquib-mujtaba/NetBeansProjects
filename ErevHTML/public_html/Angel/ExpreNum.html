@@ -1,0 +1,18 @@
+
+<html>
+    <head>
+        <title>Demostration of Angular Expression</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <script src="angular.min.js">
+        </script>
+    </head>
+    <body>
+        <div ng-app="">
+            <p>    Enter Price  : <input type="number" ng-model="kprice" placeholder="Enter Price of keyboard"></p>
+            <p>    Enter Quantity  : <input type="number" ng-model="kqnt" placeholder="Enter Number of keybord you bought"></p>
+        
+           <h1 style="text-align: center;font-size: 300%">Total Amount:{{kprice+kqnt}} <span ng-bind="name"></span></h1></div>
+
+    </body>
+</html>

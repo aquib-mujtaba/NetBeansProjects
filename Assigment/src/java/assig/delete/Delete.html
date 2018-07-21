@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Deleting Record</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <center>
+        <form name="frmDelete" method="POST" action="http://localhost:7070/Assigment/Delete" > 
+            <div >
+                <table border="1" style="width: 100px;height: 300px">
+                    <thead>
+                        <tr><th colspan="2">Delete User</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>UserName</td><td><input type="text" name="tbUsername" required/></td></tr>
+                        <tr>
+                            <td> 
+                                <button type="submit" name="bsubmit">Delete</button>
+                            </td>
+                            <td>
+                                <button type="reset" name="breset">Reset</button>
+                                <button type="button" name="bsubmit">Close</button>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                    <tfoot>
+             <tr>
+                 <th colspan="2">&COPY;ErevMax Corporation &trade;Limited &reg;</th>
+             </tr>
+                    </tfoot>
+
+                </table>
+
+            </div>
+        </form>
+        </center>
+    </body>
+</html>

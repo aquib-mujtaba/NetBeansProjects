@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="">
+    <head>
+        <title>Angular Js</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="angular.min.js">
+        </script>
+          <style>
+                body
+                {
+
+                    background-image: url({{bipath}});
+                    background-repeat: no-repeat;
+                    height: 800px;
+                }
+            </style>  
+    </head>
+    <body>
+        <div>
+            <h2>Enter your Name</h2>
+        </div>
+        <div>
+            <p>
+                Name : <input type="text" ng-model="name" placeholder="Enter Name Here">
+            </p>Enter Font Color <input type="text" ng-model="fcolor" placeholder="Enter Font Color">
+            <p>
+                Enter Enter Back Color <input type="text" ng-model="bcolor" placeholder="Enter the Back Color">
+            </p>
+            <h1 style="text-align: center;font-size: 300%;color: {{fcolor}};background-color: {{bcolor}}">Hello, My Name {{name}}</h1>
+            <p>
+                Enter path of image<input type="text" ng-model="bipath" placeholder="Enter Path of image">
+            </p>          
+
+            </div>
+
+    </body>
+</html>

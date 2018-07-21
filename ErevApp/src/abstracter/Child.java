@@ -1,0 +1,9 @@
+package abstracter;
+public class Child extends Parent{
+
+    public Child() {
+        System.out.println("Child has been created");
+    }
+    
+    
+}
